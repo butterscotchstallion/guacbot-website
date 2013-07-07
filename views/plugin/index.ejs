@@ -1,0 +1,226 @@
+
+<h2 class="first-header">Plugins</h2>
+<p>
+    All interactive plugins require addressing the bot by name in order to get a response. This 
+    decision was made to decrease unwanted noise.
+</p>
+
+<table class="plugins">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Dependencies</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="name-col"><a href="./plugins/titler">titler</a></td>
+            <td>
+                Displays the title of websites linked in the channel
+            </td>
+            <td class="has-dependencies">
+                <ul>
+                    <li><a href="#" title="db plugin">db</a></li>
+                </ul>
+            </td>
+        </tr>
+        
+        <tr>
+            <td class="name-col"><a href="./plugins/logger">logger</a></td>
+            <td>
+                Logs channel messages
+            </td>
+            <td class="has-dependencies">
+                <ul>
+                    <li><a href="#" title="db plugin">db</a></li>
+                </ul>
+            </td>
+        </tr>
+        
+        <tr>
+            <td class="name-col"><a href="./plugins/db">db</a></td>
+            <td>
+                Talks to a MySQL database. This is a dependency plugin and doesn't do anything
+                by itself, but many other plugins use it.
+            </td>
+            <td class="no-dependencies">
+                &mdash;
+            </td>
+        </tr>
+        
+        <tr>
+            <td><a href="./plugins/weather">weather</a></td>
+            <td>
+                Retrieves weather on command from <a href="http://www.wunderground.com/weather/api/" title="Wunderground API">wunderground API</a>.
+                Requires an API key.
+            </td>
+            <td class="no-dependencies">
+                &mdash;
+            </td>
+        </tr>
+        
+        <tr>
+            <td><a href="./plugins/caps-lock-saturday">CAPS-LOCK SATURDAY</a></td>
+            <td>
+                Capitalizes bot nick on Saturdays
+            </td>
+            <td class="no-dependencies">
+                &mdash;
+            </td>
+        </tr>
+        
+        <tr>
+            <td><a href="./plugins/nickserv-auto-identify">nickserv auto identify</a></td>
+            <td>
+                Does what it says on the tin. Configurable delay.
+            </td>
+            <td class="no-dependencies">
+                &mdash;
+            </td>
+        </tr>
+        
+        <tr>
+            <td><a href="./plugins/event-messages">event messages</a></td>
+            <td>
+                Perform configurable actions when events occur, such as kicks, joins, parts, quits, et cetera.
+            </td>
+            <td class="has-dependencies">
+                &mdash;
+            </td>
+        </tr>
+        
+        <tr>
+            <td><a href="./plugins/ignore">ignore</a></td>
+            <td>
+                Ignore by hostmask. Supports globbing.
+            </td>
+            <td class="has-dependencies">
+                <ul>
+                    <li><a href="#" title="db plugin">db</a></li>
+                </ul>
+            </td>
+        </tr>
+        
+        <tr>
+            <td><a href="./plugins/note">note</a></td>
+            <td>
+                Leave someone a note, which is delivered next time they say something
+            </td>
+            <td class="has-dependencies">
+                <ul>
+                    <li><a href="#" title="db plugin">db</a></li>
+                </ul>
+            </td>
+        </tr>
+        
+        <tr>
+            <td><a href="./plugins/seen">seen</a></td>
+            <td>
+                Display the last time someone said something and what they said
+            </td>
+            <td class="has-dependencies">
+                <ul>
+                    <li><a href="#" title="db plugin">db</a></li>
+                </ul>
+            </td>
+        </tr>
+        
+        <tr>
+            <td><a href="./plugins/repost">repost</a></td>
+            <td>
+                Detects links that have been seen before
+            </td>
+            <td class="has-dependencies">
+                <ul>
+                    <li><a href="#" title="db plugin">db</a>, </li>
+                    <li><a href="#" title="logger plugin">logger</a></li>
+                </ul>
+            </td>
+        </tr>
+        
+        <tr>
+            <td><a href="./plugins/quote">quote</a></td>
+            <td>
+                Display a random quote optionally filtering by a specific nick
+            </td>
+            <td class="has-dependencies">
+                <ul>
+                    <li><a href="#" title="db plugin">db</a>, </li>
+                    <li><a href="#" title="logger plugin">logger</a></li>
+                </ul>
+            </td>
+        </tr>
+        
+        <tr>
+            <td><a href="./plugins/news">news</a></td>
+            <td>
+                Display news headlines at a configurable interval from configurable news feeds
+            </td>
+            <td class="no-dependencies">
+                &mdash;
+            </td>
+        </tr>
+        
+        <tr>
+            <td><a href="./plugins/badwords">badwords</a></td>
+            <td>
+                Perform configurable action when someone says certain words or phrases
+            </td>
+            <td class="no-dependencies">
+                &mdash;
+            </td>
+        </tr>
+        
+        <tr>
+            <td><a href="./plugins/info">info</a></td>
+            <td>
+                Display uptime and loaded plugins
+            </td>
+            <td class="no-dependencies">
+                &mdash;
+            </td>
+        </tr>
+        
+        <tr>
+            <td><a href="./plugins/arbiter">arbiter</a></td>
+            <td>
+                Randomly selects a choice from a phrase containing the word "or"
+            </td>
+            <td class="no-dependencies">
+                &mdash;
+            </td>
+        </tr>
+        
+        <tr>
+            <td><a href="./plugins/reminder">reminder</a></td>
+            <td>
+                Remind you about stuff
+            </td>
+            <td class="no-dependencies">
+                &mdash;
+            </td>
+        </tr>
+        
+        <tr>
+            <td><a href="./plugins/invite">invite</a></td>
+            <td>
+                Automatically join channels upon invitation
+            </td>
+            <td class="no-dependencies">
+                &mdash;
+            </td>
+        </tr>
+        
+        <tr id="last">
+            <td><a href="./plugins/admin">admin</a></td>
+            <td>
+                Perform administrative tasks like kicking, banning, muting, et cetera
+            </td>
+            <td class="no-dependencies">
+                &mdash;
+            </td>
+        </tr>
+    </tbody>
+</table>
+

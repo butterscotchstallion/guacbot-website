@@ -1,0 +1,92 @@
+
+// body
+$mainBGColor: #fff;
+$mainTextColor: #222;
+$mainFont: 'Trocchi', serif;
+
+// header
+$headerBGColor: #99CC66;
+$headerLogoTextColor: #222;
+$headerNavLinkColor: #222;
+$headerNavLinkHoverColor: #000;
+$headerNavLinkHoverBGColor: #CCFF99;
+$headerLogoFont: 'Permanent Marker', cursive;
+
+// content
+$contentLinkColor: darken(#99CC66, 10);
+$contentLinkHoverBGColor: #CCFF99;
+$contentLinkHoverBorderBGColor: #000;
+$subheaderFont: 'Fjalla One', sans-serif;
+
+html, body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+}
+
+body {
+    background-color: $mainBGColor;
+    color: $mainTextColor;
+    font-family: $mainFont;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    padding-bottom: 3em;
+    
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+    
+    &>.container {
+        background: transparent url(/images/textured_paper.png) repeat;
+        
+        &>.row > footer {        
+            padding: 0 0 0 .25em;
+            margin: 0 0 2em 0;
+            
+            a, a:visited {
+                color: #222;
+            }
+            
+            a:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    
+    .page-content {
+        background-color: #fff;
+        overflow: auto;
+        color: #222;
+        padding: 1em;
+        line-height: 1.5;
+        font-family: inherit;
+        min-height: 600px;
+        margin: 0 0 150px 0;
+        
+        h2, h3, h4 {
+            font-family: $subheaderFont;
+        }
+        
+        .first-header {
+            padding-top: 0;
+        }
+        
+        p {
+            font-family: inherit;
+            font-size: inherit;
+        }
+        
+        a {
+            color: $contentLinkColor;
+            padding: 0;
+        }
+        
+        a:hover, a:visited:hover {
+            color: #000;
+            background-color: $contentLinkHoverBGColor;
+        }
+    }
+}
+ 

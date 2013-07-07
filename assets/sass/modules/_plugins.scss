@@ -1,0 +1,40 @@
+
+
+body.plugins {
+    table.plugins {
+        width: 100%;
+        
+        th {
+            font-weight: bold;
+        }
+        
+        tr {
+            border-bottom: 1px dotted #666;
+        }
+        
+        tr#last {
+            border-bottom: 0;
+        }
+        
+        td, th {
+            padding: 1em .25em 1em .25em;
+        }
+        
+        td.name-col {
+            width: 25%;
+        }
+        
+        td.has-dependencies {
+            ul {
+                li, a {
+                    padding: .5em 0 .5em 0;
+                    display: inline;                   
+                }
+            }
+        }
+        
+        td.no-dependencies {
+            text-align: center;
+        }
+    }
+}

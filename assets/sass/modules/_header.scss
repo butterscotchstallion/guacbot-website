@@ -1,0 +1,25 @@
+@import "../partials/_base";
+
+header {
+    background-color: $headerBGColor;
+    padding: 0 1em 1em 1em;
+    overflow: auto;
+    
+    // Logo
+    h1 {
+        color: $headerLogoTextColor;
+        margin: 0;
+        padding: 0;
+        float: left;
+        width: 34%;
+        font-family: $headerLogoFont;
+        
+        a {
+            color: inherit;
+        }
+        
+        a:hover, a:visited {
+            color: inherit;
+        }
+    }
+}

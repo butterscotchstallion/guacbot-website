@@ -1,0 +1,142 @@
+<h2>Documentation</h2>
+
+<h3>Quick Start</h3>
+<ol>
+    <li>
+        <pre>$ git clone https://github.com/prgmrbill/guacbot</pre>
+    </li>
+    <li>
+        <pre>$ npm install</pre>
+    </li>
+    <li>
+        <pre>$ cp bot-config.sample.json bot-config.json</pre>
+    </li>
+    <li>
+        Edit your config - most of the lines at the top are required and self-explanatory.
+    </li>
+    <li>
+        <pre>$ node lib/bot.js</pre>
+    </li>
+    <li>
+        Congratulations! Guacbot is now running. You may wish to run the bot using <a href="https://github.com/isaacs/node-supervisor">supervisor</a>,
+        which will automatically restart the process if the bot crashes.
+    </li>
+</ol>
+
+<h3>Configuration</h3>
+<p>This bot uses a JSON configuration. Here's what an example configuration might look like</p>
+
+<pre>
+{
+    "server": "irc.slashnet.org",
+    
+    "nick": "guacbot",
+    
+    "realName": "guacbot",
+    
+    "userName": "guacbot",
+    
+    "channels": [
+        "#guacamole"
+    ],
+    
+    "plugins": {
+        "titler": {},
+        "weather": {
+            "apiKey": "your-api-key-here"
+        },
+        "caps-lock-saturday": {},
+        "uptime": {},
+        "nickserv-auto-identify": {
+            "password": "omgponies",
+            "delay": 0
+        },
+        "news": {},
+        "event-messages": {
+            "kick": [
+                "$nick is a sheister! a charlatan!"
+            ],
+            
+            "quit": [
+                "$nick bites the big one!"
+            ]
+        },
+        "admin": {
+            "admins": [
+                "your-hostmask-here@example.com"
+            ],
+            
+            "useChanserv": true,
+            
+            "accessDeniedMessages": [
+                "Access denied!!!",
+                "no way",
+                "lol no",
+                "no"
+            ],
+            
+            "triggers": [
+                {
+                    "trigger": "say",
+                    "command": "say"
+                },
+                {
+                    "trigger": "op",
+                    "command": "op"
+                },
+                {
+                    "trigger": "deop",
+                    "command": "deop"
+                },
+                {
+                    "trigger": "kick",
+                    "command": "kick"
+                },
+                {
+                    "trigger": "join",
+                    "command": "join"
+                },
+                {
+                    "trigger": "part",
+                    "command": "part"
+                },
+                {
+                    "trigger": "nick",
+                    "command": "nick"
+                }
+            ]
+        },
+        "reminder": {
+            
+        },
+        "ignore": {
+            
+        },
+        "arbiter": {
+        
+        },
+        "invite": {
+        
+        },
+        "note": {
+        
+        },
+        "badwords": {
+            "words": [
+            
+            ],
+            "actions": "mute,say",
+            "banDuration": "1m",
+            "muteDuration": "5m",
+            "replyMessages": [
+                "illegal word!!!"
+            ],
+            "kickMessages": [
+                "bad words!!!",
+                "illegal word",
+                "profanity"
+            ]
+        }
+    }
+}
+</pre>

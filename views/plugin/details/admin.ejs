@@ -1,0 +1,77 @@
+<h2>Plugins &raquo; Admin</h2>
+
+<p>Perform administrative tasks like kicking, banning, muting, et cetera</p>
+
+<h3>Options</h3>
+<table class="options">
+    <thead>
+        <tr>
+            <th>name</th>
+            <th>description</th>
+            <th>default values</th>
+            <th>required</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="option-name">admins</td>
+            <td>Array of hostmasks for admins. Supports globbing</td>
+            <td>&mdash;</td>
+            <td class="required">yes</td>
+        </tr>
+        
+        <tr>
+            <td class="option-name">useChanserv</td>
+            <td>Use chanserv to perform some channel operations, like kicking and granting channel operator status</td>
+            <td>true</td>
+            <td class="optional">no</td>
+        </tr>
+        
+        <tr>
+            <td class="option-name">kickMessages</td>
+            <td>Array of messages to choose from when someone is kicked</td>
+            <td>&mdash;</td>
+            <td class="optional">no</td>
+        </tr>
+        
+        <tr>
+            <td class="option-name">accessDeniedMessages</td>
+            <td>
+                Array of messages to choose from when someone who is not an admin attempts to use an ability
+                that requires being an admin
+            </td>
+            <td>&mdash;</td>
+            <td class="optional">no</td>
+        </tr>
+        
+        <tr>
+            <td class="option-name">banDuration</td>
+            <td>
+                Default duration for bans
+            </td>
+            <td>1 minute</td>
+            <td class="optional">no</td>
+        </tr>
+        
+        <tr>
+            <td class="option-name">muteDuration</td>
+            <td>
+                Default duration for mutes
+            </td>
+            <td>1 minute</td>
+            <td class="optional">no</td>
+        </tr>
+        
+        <tr>
+            <td class="option-name">triggers</td>
+            <td>
+                Array of objects which map commands to actions
+            </td>
+            <td>&mdash;</td>
+            <td class="required">yes</td>
+        </tr>
+    </tbody>
+</table>
+
+<h3>Dependencies</h3>
+<p>None!</p>

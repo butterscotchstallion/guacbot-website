@@ -1,0 +1,27 @@
+{
+  "name": "guacbot",
+  "private": true,
+  "version": "0.0.0",
+  "description": "a Sails application",
+  "dependencies": {
+    "sails": "0.8.94",
+    "optimist": "0.4.0",
+    "handlebars": "~1.0.12",
+    "mysql": "~2.0.0-alpha8",
+    "sails-mysql": "~0.7.8"
+  },
+  "scripts": {
+    "start": "node app.js",
+    "debug": "node debug app.js"
+  },
+  "main": "app.js",
+  "repository": "",
+  "author": "",
+  "license": "MIT",
+  "volo": {
+    "dependencies": {
+      "mustache": "github:janl/mustache.js/0.7.2",
+      "render-mustache": "github:sailjs/render-mustache/master"
+    }
+  }
+}

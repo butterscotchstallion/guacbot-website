@@ -1,0 +1,32 @@
+
+$answerBorderColor: #666633;
+
+body.home {
+    .page-content {
+        section.faq {
+            p {
+                margin: 2em 0 2em 0;
+
+                ul {
+                    list-style: square;
+                    
+                    li {
+                        padding-left: 40px;
+                    }
+                }
+            }
+            
+            p.first {
+                margin-top: 0;
+            }
+            
+            p.answer {
+                border: 5px solid $answerBorderColor;
+            }
+            
+            p.answer:before {
+                border-color: $answerBorderColor transparent;
+            }
+        }
+    }
+}
