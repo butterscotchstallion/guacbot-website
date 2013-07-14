@@ -7,8 +7,8 @@
     "sails": "0.8.94",
     "optimist": "0.4.0",
     "handlebars": "~1.0.12",
-    "mysql": "~2.0.0-alpha8",
-    "sails-mysql": "~0.7.8"
+    "sails-mysql": "~0.7.8",
+    "nodemon": "~0.7.8"
   },
   "scripts": {
     "start": "node app.js",

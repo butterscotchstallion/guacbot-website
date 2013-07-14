@@ -2,7 +2,7 @@
 
 header {
     background-color: $headerBGColor;
-    padding: 0 1em 1em 1em;
+    padding: 0 1em 0 1em;
     overflow: auto;
     
     // Logo
@@ -13,9 +13,12 @@ header {
         float: left;
         width: 34%;
         font-family: $headerLogoFont;
+        font-size: 59px;
         
         a {
             color: inherit;
+            text-decoration: none;
+            border: 0;
         }
         
         a:hover, a:visited {

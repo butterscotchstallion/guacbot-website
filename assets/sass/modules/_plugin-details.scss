@@ -1,43 +1,61 @@
 
 
-body.plugins {
-    .page-content {
-        table.options {
-            width: 100%;
+.plugin-details {
+    p.syntax {
+        background-color: #000;
+        padding: 1em;
+        font-family: consolas, courier;
+        color: #ccc;
+    }
+    
+    ul.feed-list {
+        list-style: square;
+        padding-left: 1em;
+        
+        li > ol {
+            margin-left: 1em;
+        }
+    }
+    
+    span.nick {
+        color: #fff;
+    }
+    
+    table.options {
+        width: 100%;
+        
+        th {
+            font-weight: bold;
+        }
+        
+        th, td {
+            padding: .25em;
+        }
+        
+        td {
             
-            th {
-                font-weight: bold;
-            }
-            
-            th, td {
-                padding: .25em;
-            }
-            
-            td {
-                
-            }
-            
-            td.option-name {
-                width: 25%;
-            }
-            
-            td.monospace {
-                font-family: consolas, courier;
-                background-color: #ececec;
-                padding: .25em;
-            }
-            
-            td.optional {
-                color: #99CC33;
-                text-align: center;
-                font-weight: bold;
-            }
-            
-            td.required {
-                color: #660000;
-                text-align: center;
-                font-weight: bold;
-            }
+        }
+        
+        td.option-name {
+            width: 25%;
+        }
+        
+        td.monospace {
+            font-family: consolas, courier;
+            background-color: #ececec;
+            padding: .25em;
+        }
+        
+        td.optional {
+            color: #99CC33;
+            text-align: center;
+            font-weight: bold;
+        }
+        
+        td.required {
+            color: #660000;
+            text-align: center;
+            font-weight: bold;
         }
     }
 }

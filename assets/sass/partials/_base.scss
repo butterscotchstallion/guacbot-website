@@ -7,13 +7,18 @@ $mainFont: 'Trocchi', serif;
 // header
 $headerBGColor: #99CC66;
 $headerLogoTextColor: #222;
+
+// header nav
+$headerNavBGColor: #FFFFCC;
+$headerNavBottomBorderColor: #336600;
 $headerNavLinkColor: #222;
 $headerNavLinkHoverColor: #000;
 $headerNavLinkHoverBGColor: #CCFF99;
 $headerLogoFont: 'Permanent Marker', cursive;
 
 // content
-$contentLinkColor: darken(#99CC66, 10);
+$contentLinkColor: #993333;
+$contentLinkBorderColor: #000;
 $contentLinkHoverBGColor: #CCFF99;
 $contentLinkHoverBorderBGColor: #000;
 $subheaderFont: 'Fjalla One', sans-serif;
@@ -31,7 +36,6 @@ body {
     font-family: $mainFont;
     font-size: 1.1rem;
     line-height: 1.5;
-    padding-bottom: 3em;
     
     ul {
         margin: 0;
@@ -40,6 +44,8 @@ body {
     
     &>.container {
         background: transparent url(/images/textured_paper.png) repeat;
+        overflow: auto;
+        min-height: 100%;
         
         &>.row > footer {        
             padding: 0 0 0 .25em;
@@ -57,13 +63,24 @@ body {
     
     .page-content {
         background-color: #fff;
-        overflow: auto;
         color: #222;
-        padding: 1em;
+        padding: .25em 1em 1em 1em;
         line-height: 1.5;
         font-family: inherit;
-        min-height: 600px;
-        margin: 0 0 150px 0;
+        margin: 0 0 150px 0;        
+        overflow: auto;
+        
+        h2 { 
+            font-size: 40px;
+        }
+        
+        h3 {
+            font-size: 28px;
+        }
+        
+        h4 {
+            font-size: 20px;
+        }
         
         h2, h3, h4 {
             font-family: $subheaderFont;
@@ -80,7 +97,9 @@ body {
         
         a {
             color: $contentLinkColor;
-            padding: 0;
+            padding: 0 0 .25em 0;
+            border-bottom: $contentLinkBorderColor;
+            text-decoration: none;
         }
         
         a:hover, a:visited:hover {

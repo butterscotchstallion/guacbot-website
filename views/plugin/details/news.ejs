@@ -1,32 +1,64 @@
-<h2>Plugins &raquo; News</h2>
+<div class="plugin-details">
+    <h2>Plugins &raquo; News</h2>
 
-<p>Display news headlines at a configurable interval from configurable news feeds</p>
+    <p>Display news headlines at a configurable interval from configurable news feeds</p>
 
-<h3>Options</h3>
-<table class="options">
-    <thead>
-        <tr>
-            <th>name</th>
-            <th>description</th>
-            <th>default values</th>
-            <th>required</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td class="option-name">intervalInMilliseconds</td>
-            <td>Send a news headerline every X milliseconds</td>
-            <td>3600000 (1 hour)</td>
-            <td class="required">yes</td>
-        </tr>
-        <tr>
-            <td class="option-name">channels</td>
-            <td>Send news headlines to these channels</td>
-            <td>[]</td>
-            <td class="required">yes</td>
-        </tr>
-    </tbody>
-</table>
+    <h3>Feeds</h3>
+    <p>Guacbot currently retrieves the following feeds. In the future, it will be possible to choose
+    which feeds are available via configuration.</p>
+    <ul class="feed-list">
+        <li>
+            <a href="http://hufffingtonpost.com">Huffington Post</a>
+            <ol>
+                <li><a href="http://feeds.huffingtonpost.com/huffingtonpost/raw_feed">Full feed</a></li>
+                <li><a href="http://www.huffingtonpost.com/feeds/verticals/weird-news/index.xml">Weird</a></li>
+                <li><a href="http://www.huffingtonpost.com/feeds/verticals/sports/index.xml">Sports</a></li>
+                <li><a href="http://www.huffingtonpost.com/feeds/verticals/most_popular_entries/index.xml">Most Popular</a></li>
+            </ol>
+        </li>
+        <li>
+            <a href="http://www.npr.org/rss/rss.php?id=1001">NPR</a>
+        </li>
+        <li>
+            <a href="http://www.freedomsphoenix.com/RSS/RSS-Feed.xml?EdNo=001&Page=Art">Freedom Phoenix</a>
+        </li>
+        <li>
+            <a href="http://feeds.theonion.com/theonion/daily">The Onion</a>
+        </li>
+        <li>
+            <a href="https://news.ycombinator.com/rss">Hacker News</a>
+        </li>
+        <li>
+            <a href="http://seclists.org/rss/fulldisclosure.rss">Full Disclosure</a>
+        </li>
+        <li>
+            <a href="http://www.aljazeera.com/Services/Rss/?PostingId=2007731105943979989">Aljazeera</a>
+        </li>
+    </ul>
 
-<h3>Dependencies</h3>
-<p>None!</p>
+    <h3>Options</h3>
+    <table class="options">
+        <thead>
+            <tr>
+                <th>name</th>
+                <th>description</th>
+                <th>default values</th>
+                <th>required</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="option-name">intervalInMilliseconds</td>
+                <td>Send a news headerline every X milliseconds</td>
+                <td>3600000 (1 hour)</td>
+                <td class="required">yes</td>
+            </tr>
+            <tr>
+                <td class="option-name">channels</td>
+                <td>Send news headlines to these channels. Note: if this array is empty, this plugin will do nothing.</td>
+                <td>[]</td>
+                <td class="required">yes</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

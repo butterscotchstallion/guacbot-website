@@ -1,142 +1,176 @@
-<h2>Documentation</h2>
+<div class="documentation">
+    <h2>Documentation</h2>
 
-<h3>Quick Start</h3>
-<ol>
-    <li>
-        <pre>$ git clone https://github.com/prgmrbill/guacbot</pre>
-    </li>
-    <li>
-        <pre>$ npm install</pre>
-    </li>
-    <li>
-        <pre>$ cp bot-config.sample.json bot-config.json</pre>
-    </li>
-    <li>
-        Edit your config - most of the lines at the top are required and self-explanatory.
-    </li>
-    <li>
-        <pre>$ node lib/bot.js</pre>
-    </li>
-    <li>
-        Congratulations! Guacbot is now running. You may wish to run the bot using <a href="https://github.com/isaacs/node-supervisor">supervisor</a>,
-        which will automatically restart the process if the bot crashes.
-    </li>
-</ol>
+    <h3>Table of contents</h3>
+    <ol class="toc">
+        <li><a href="#requirements">Requirements</li></a>
+        <li><a href="#quick-start">Quick Start</li></a>
+        <li><a href="#tips">Tips for additional awesomeness</li></a>
+        <li><a href="#example-config">Example configuration</li></a>
+        <li><a href="#troubleshooting">Troubleshooting</li></a>
+    </ol>
 
-<h3>Configuration</h3>
-<p>This bot uses a JSON configuration. Here's what an example configuration might look like</p>
+    <h3 id="requirements">Requirements</h3>
+    <p>
+        Guacbot requires <a href="http://nodejs.org">Node</a> and a 
+        <a href="https://www.mysql.com/downloads/">MySQL</a> database.
+    </p>
 
-<pre>
-{
-    "server": "irc.slashnet.org",
-    
-    "nick": "guacbot",
-    
-    "realName": "guacbot",
-    
-    "userName": "guacbot",
-    
-    "channels": [
-        "#guacamole"
-    ],
-    
-    "plugins": {
-        "titler": {},
-        "weather": {
-            "apiKey": "your-api-key-here"
-        },
-        "caps-lock-saturday": {},
-        "uptime": {},
-        "nickserv-auto-identify": {
-            "password": "omgponies",
-            "delay": 0
-        },
-        "news": {},
-        "event-messages": {
-            "kick": [
-                "$nick is a sheister! a charlatan!"
-            ],
-            
-            "quit": [
-                "$nick bites the big one!"
-            ]
-        },
-        "admin": {
-            "admins": [
-                "your-hostmask-here@example.com"
-            ],
-            
-            "useChanserv": true,
-            
-            "accessDeniedMessages": [
-                "Access denied!!!",
-                "no way",
-                "lol no",
-                "no"
-            ],
-            
-            "triggers": [
-                {
-                    "trigger": "say",
-                    "command": "say"
-                },
-                {
-                    "trigger": "op",
-                    "command": "op"
-                },
-                {
-                    "trigger": "deop",
-                    "command": "deop"
-                },
-                {
-                    "trigger": "kick",
-                    "command": "kick"
-                },
-                {
-                    "trigger": "join",
-                    "command": "join"
-                },
-                {
-                    "trigger": "part",
-                    "command": "part"
-                },
-                {
-                    "trigger": "nick",
-                    "command": "nick"
-                }
-            ]
-        },
-        "reminder": {
-            
-        },
-        "ignore": {
-            
-        },
-        "arbiter": {
+    <h3 id="quick-start">Quick Start</h3>
+    <ol>
+        <li>
+            <pre>$ git clone https://github.com/prgmrbill/guacbot</pre>
+        </li>
+        <li>
+            <pre>$ npm install</pre>
+        </li>
+        <li>
+            <pre>$ cp bot-config.sample.json bot-config.json</pre>
+        </li>
+        <li>
+            Edit your config - most of the lines at the top are required and self-explanatory.
+        </li>
+        <li>
+            <pre>$ node lib/bot.js</pre>
+        </li>
+        <li>
+            Congratulations! Guacbot is now running. Observe the console output for additional information.
+        </li>
+    </ol>
+
+    <h3 id="tips">Tips for additional awesomeness</h3>
+    <ul class="tips">
+        <li>
+            Use <a href="//github.com/remy/nodemon">nodemon</a> to automatically restart 
+            if the process ends unexpectedly. This shouldn't happen often, though.
+        </li>
+        <li>
+            Use <a href="https://www.gnu.org/software/screen/">screen</a> to keep the process running after you disconnect your session.
+        </li>
+    </ul>
+
+    <h3 id="example-config">Configuration</h3>
+    <p>This bot uses a JSON configuration. Here's what an example configuration might look like</p>
+
+    <pre>
+    {
+        "server": "irc.slashnet.org",
         
-        },
-        "invite": {
+        "nick": "guacbot",
         
-        },
-        "note": {
+        "realName": "guacbot",
         
-        },
-        "badwords": {
-            "words": [
+        "userName": "guacbot",
+        
+        "channels": [
+            "#guacamole"
+        ],
+        
+        "plugins": {
+            "titler": {},
+            "weather": {
+                "apiKey": "your-api-key-here"
+            },
+            "caps-lock-saturday": {},
+            "uptime": {},
+            "nickserv-auto-identify": {
+                "password": "omgponies",
+                "delay": 0
+            },
+            "news": {},
+            "event-messages": {
+                "kick": [
+                    "$nick is a sheister! a charlatan!"
+                ],
+                
+                "quit": [
+                    "$nick bites the big one!"
+                ]
+            },
+            "admin": {
+                "admins": [
+                    "your-hostmask-here@example.com"
+                ],
+                
+                "useChanserv": true,
+                
+                "accessDeniedMessages": [
+                    "Access denied!!!",
+                    "no way",
+                    "lol no",
+                    "no"
+                ],
+                
+                "triggers": [
+                    {
+                        "trigger": "say",
+                        "command": "say"
+                    },
+                    {
+                        "trigger": "op",
+                        "command": "op"
+                    },
+                    {
+                        "trigger": "deop",
+                        "command": "deop"
+                    },
+                    {
+                        "trigger": "kick",
+                        "command": "kick"
+                    },
+                    {
+                        "trigger": "join",
+                        "command": "join"
+                    },
+                    {
+                        "trigger": "part",
+                        "command": "part"
+                    },
+                    {
+                        "trigger": "nick",
+                        "command": "nick"
+                    }
+                ]
+            },
+            "reminder": {
+                
+            },
+            "ignore": {
+                
+            },
+            "arbiter": {
             
-            ],
-            "actions": "mute,say",
-            "banDuration": "1m",
-            "muteDuration": "5m",
-            "replyMessages": [
-                "illegal word!!!"
-            ],
-            "kickMessages": [
-                "bad words!!!",
-                "illegal word",
-                "profanity"
-            ]
+            },
+            "invite": {
+            
+            },
+            "note": {
+            
+            },
+            "badwords": {
+                "words": [
+                
+                ],
+                "actions": "mute,say",
+                "banDuration": "1m",
+                "muteDuration": "5m",
+                "replyMessages": [
+                    "illegal word!!!"
+                ],
+                "kickMessages": [
+                    "bad words!!!",
+                    "illegal word",
+                    "profanity"
+                ]
+            }
         }
     }
-}
-</pre>
+    </pre>
+
+    <h3 id="troubleshooting">Troubleshooting</h3>
+    <p>Guacbot prints a lot of debugging messages to the console, especially when there is an 
+    unexpected condition. In additional, errors should provide a stack trace. All of this information
+    is critical to debugging any issues you may encounter. If you think you are experiencing a bug,
+    please provide all of the console output when <a href="//github.com/prgmrbill/guacbot/issues/new">opening an issue</a>. 
+    Please include steps to reproduce the problem. </p>
+</div>

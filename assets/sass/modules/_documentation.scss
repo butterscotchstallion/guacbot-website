@@ -1,11 +1,17 @@
 
-body.documentation {
-    .page-content {
-        pre {
-            background-color: #eee;
-            padding: 1em;
-            font-family: consolas, courier;
-            color: #222;
+.documentation {
+    pre {
+        background-color: #eee;
+        padding: 1em;
+        font-family: consolas, courier;
+        color: #222;
+    }
+    
+    ul.tips {
+        list-style: square;
+        
+        li {
+            margin: 0 0 0 2em;
         }
     }
 }

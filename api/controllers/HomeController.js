@@ -1,17 +1,17 @@
 /*---------------------
-	:: Documentation 
+	:: Home 
 	-> controller
 ---------------------*/
-var DocumentationController = {
+var HomeController = {
 
     index: function (req, res) {
         var layout = typeof req.headers['x-pjax'] !== 'undefined' && req.headers['x-pjax'];
         
         res.view({
-            pageTitle: 'Documentation',
+            pageTitle: 'About',
             layout: !layout
         });
     }
 
 };
-module.exports = DocumentationController;
+module.exports = HomeController;
